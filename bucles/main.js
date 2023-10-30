@@ -19,7 +19,7 @@ for( let indice = 0; indice < alumnos.length ; indice++ ){
 /* console.log( alumnos.includes( "Alvaro" ) ) */
 
 
-
+/* 
 function includes( nombreABuscar, array ){
     let resultado = false
     for (let index = 0; index < array.length; index++) {
@@ -29,7 +29,7 @@ function includes( nombreABuscar, array ){
         }
     }
    return resultado
-}
+} */
 
 /* console.log(  includes( "Daniela", alumnos )  ) */
 /* console.log(  includes( "Renzo", alumnos )  )
@@ -109,7 +109,7 @@ for( const key in mentor ){
 } */
 
 
-let nombreIngresado = prompt('Ingrese su nombre')
+/* let nombreIngresado = prompt('Ingrese su nombre')
 let pase = prompt( 'Ingrese el tipo de pase "VIP" o "NORMAL"' )
 let entrada = prompt( 'Tiene entrada ? "SI" o "NO"' )
 
@@ -135,5 +135,5 @@ if( nombreIngresado == "Nicolas" || pase == "VIP" ){
     }else{
         alert( 'Adios' )
     }
-}
+} */
 
