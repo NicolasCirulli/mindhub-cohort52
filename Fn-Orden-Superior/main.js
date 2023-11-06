@@ -330,7 +330,7 @@ igual: “Ganaste, has adivinado el número.”
 //  Si el numero es mayor -> Te quedaste sin intentos
 //  Si el numero es menor -> Te quedaste sin intentos
 
-const numeroIncognita = 7
+/* const numeroIncognita = 7
 
 let numeroIngresado = Number( prompt('Ingrese un numero') )
 
@@ -380,4 +380,4 @@ if( numeroIncognita == numeroIngresado ){
             alert( "Te quedaste sin intentos" )
         }
     }
-}
+} */

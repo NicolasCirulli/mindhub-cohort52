@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+   --primary-color : rgb(53, 53, 56);
+}
+
+
+.imagen{
+    object-position: 0 30%;
+}
+
