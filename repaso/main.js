@@ -93,8 +93,6 @@ const agentesJugables = agentes.data.filter( agente => agente.isPlayableCharacte
 
 contenedor.innerHTML += crearTemplate( agentesJugables)
 
-
-
 function crearTemplate( listaAgentes ){
     let template = ""
     for (const agente of listaAgentes) {
@@ -111,6 +109,3 @@ function crearTarjeta( agente ){
 </article>`
 }
 
-/* 
-     
-*/
