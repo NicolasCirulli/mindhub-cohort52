@@ -106,6 +106,6 @@ function crearTarjeta( agente ){
     <img class="h-[70%]" src="${agente.fullPortrait}" alt="">
     <h2 class="text-center">${agente.displayName}</h2>
     <p class="">${agente.description}</p>
+    <a href="./detalle.html?id=${agente.uuid}" class="border bg-blue-500 text-white p-3 w-2/4 self-center rounded text-center"  > ir a detalle</a>
 </article>`
 }
-
