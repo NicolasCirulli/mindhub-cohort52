@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Metodos array">
+    <link rel="shortcut icon" href="https://mindhubweb.com/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title> Metodos array </title>
+</head>
+<body>
+    
+    <div class="min-h-screen w-full flex gap-5 justify-center items-center flex-col bg-zinc-800 text-white">
+    
+        <header class="h-[100px] flex justify-center items-center">
+            <h1>Cervezas</h1>
+        </header>
+        <main class="grow flex gap-[200px] ">
+            <table>
+                <caption> mas alcoholicas </caption>
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>ABV</th>
+                        <th>IBU</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-alcoholicas">
+    
+                </tbody>
+            </table>
+            <table>
+                <caption>mas amargas</caption>
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>ABV</th>
+                        <th>IBU</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-amargas">
+    
+                </tbody>
+            </table>
+        </main>
+
+    </div>
+    
+    
+    <script src="./tailwind.config.js"></script>
+    <script src="./beers.js" ></script>
+    <script src="./main.js"></script>
+</body>
+</html>
