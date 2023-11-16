@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="localStorage">
+    <link rel="shortcut icon" href="https://mindhubweb.com/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title> localStorage </title>
+</head>
+<body>
+    
+    <div class="min-h-screen w-full flex gap-10 justify-center items-center flex-col bg-zinc-600">
+       
+       <header class="pt-10">
+        <form class="border p-5 bg-blue-50 text-blue-800 rounded flex flex-col gap-5" id="formulario-js">
+            <h2>Crear Nota</h2>
+            <label class="flex flex-col font-semibold"> Titulo
+                <input type="text" id="titulo-js" class="outline-none border rounded py-2" name="titulo" autocomplete="off">
+            </label>
+            <div class="flex flex-col">
+                <label class="font-semibold" for="descripcion-js"> Descripcion</label>
+                <textarea id="descripcion-js" class="resize-none border outline-none rounded font-semibold" name="description"  cols="30" rows="4"></textarea>
+            </div>
+            <button class="bg-blue-600 text-white py-2 px-5 font-semibold rounded"> Guardar </button>
+        </form>
+
+        <div class="border p-5 bg-blue-50 text-blue-800 rounded flex flex-col gap-5 hidden" id="formulario-editar-js">
+            <h2>Editar nota</h2>
+            <label class="flex flex-col font-semibold"> Titulo
+                <input type="text" id="titulo-editar-js" class="outline-none border rounded py-2" name="titulo" autocomplete="off">
+            </label>
+            <div class="flex flex-col">
+                <label class="font-semibold" for="descripcion-editar-js"> Descripcion</label>
+                <textarea id="descripcion-editar-js" class="resize-none border outline-none rounded font-semibold" name="description"  cols="30" rows="4"></textarea>
+            </div>
+            <div class="flex gap-5 justify-center">
+                <button class="bg-red-600 text-white py-2 px-5 font-semibold rounded" id="btn-cancelar"> Cancelar </button>
+                <button class="bg-blue-600 text-white py-2 px-5 font-semibold rounded" id="btn-editar" data-nota> Guardar </button>
+            </div>
+        </div>
+       </header>
+       <main class="w-full grow flex gap-5 justify-center items-center flex-wrap max-w-[1440px]" id="contenedor-js">
+         
+       </main>
+       <footer>
+            <p class="text-white p-5">Cirulli Nicolas</p>
+       </footer>
+
+    </div>
+    <script src="./tailwind.config.js"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
