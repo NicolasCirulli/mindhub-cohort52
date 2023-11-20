@@ -1,7 +1,7 @@
-const url = "https://valorant-api.com/v1/agents"
 const { createApp } = Vue
 
 const options = {
+    // metodo que retorna las propiedades reactivas
     data(){
         return {
             agentes:[],
@@ -11,23 +11,25 @@ const options = {
             selected : "all"
         }
     },
+    // hook de ciclo de vida
     beforeCreate(){
         fetch( "https://valorant-api.com/v1/agents" )
             .then( res => res.json() )
             .then( ( parametro ) => {
+                // el this es para hacer referencia a las propiedades que retorna data o propiedades de methods
                 this.agentes = parametro.data.filter( agente => agente.isPlayableCharacter )
                 this.agentesFiltrados = this.agentes
-                this.roles = [...new Set( this.agentes.map( agente => agente.role.displayName ) )]
+                this.roles = this.obtenerRoles(this.agentes)
             } )
             .catch( err => console.log(err) )   
     },
     methods:{
-        guardarSearch(event){
-            this.search = event.target.value 
-        },
-        guardarSelect(event){
-            this.selected = event.target.value
-        },
+        obtenerRoles( agentes ){
+            return [...new Set( agentes.map( agente => agente.role.displayName ) )]
+        }
+    },
+    computed:{
+        // Se llaman una vez en el html y se vuelven a ejecutar solas cuando cambia alguna de las propiedades reactivas que esta usando
         filtrar(){
             const aux = this.agentes.filter( agente => agente.displayName.toLowerCase().includes( this.search.toLowerCase() ) && (this.selected == "all" || agente.role.displayName == this.selected )  )
             this.agentesFiltrados = aux
